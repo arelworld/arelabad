@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio | Creative Discography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">PORTFOLIO<span>.</span></div>
+            <ul>
+                <li class="active"><i class="fas fa-home"></i> Home</li>
+                <li class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="main-search" placeholder="Search library...">
+                </li>
+            </ul>
+            <div class="playlists">
+                <p class="section-title">DISCOGRAPHY</p>
+                <ul id="category-list">
+                    <li>Design Hits</li>
+                    <li>Code Anthems</li>
+                    <li>Creative Mix</li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="profile-header">
+                <div class="profile-img"><i class="fas fa-compact-disc"></i></div>
+                <div class="profile-info">
+                    <span class="verified"><i class="fas fa-check-circle"></i> Verified Artist</span>
+                    <h1>Your Name</h1>
+                    <p>Creative Developer • 1.2M Impressions</p>
+                    <div class="controls">
+                        <button class="btn-play" onclick="document.getElementById('contact-form').scrollIntoView()">Request a Track</button>
+                        <button id="btn-shuffle" class="btn-follow"><i class="fas fa-shuffle"></i> Shuffle</button>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Releases</h2>
+                    <div class="discography-filter">
+                        <span class="filter-label">Year:</span>
+                        <select id="year-filter">
+                            <option value="all">All</option>
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid" id="project-grid"></div>
+            </section>
+
+            <section class="tracklist-section">
+                <h2>Technical Skills</h2>
+                <div id="skills-container"></div>
+            </section>
+
+            <section class="tour-section">
+                <h2>World Tour (Experience)</h2>
+                <div id="tour-dates"></div>
+            </section>
+
+            <section class="contact-section">
+                <div class="studio-card">
+                    <h3><i class="fas fa-microphone"></i> Request a Custom Track</h3>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <textarea placeholder="Your Brief..." rows="4"></textarea>
+                        <button type="submit" class="btn-play">Send Demo Tape</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="player-bar">
+            <div class="now-playing">
+                <div class="mini-art" id="mini-art"></div>
+                <div class="track-info">
+                    <p id="current-track-name" class="track-name">Select a track</p>
+                    <p id="current-track-status" class="track-artist">Artist: Your Name</p>
+                </div>
+            </div>
+            <div class="player-controls">
+                <div class="buttons"><i class="fas fa-backward-step"></i> <i class="fas fa-circle-play fa-2x"></i> <i class="fas fa-forward-step"></i></div>
+                <div class="progress-bar"><div class="progress"></div></div>
+            </div>
+            <div class="volume-controls">
+                <i class="fas fa-volume-high"></i>
+                <div class="volume-bar"><div class="volume-fill"></div></div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-media"><img id="modal-img" src=""></div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Title</h2>
+                    <p id="modal-desc">Description</p>
+                    <div class="modal-meta"><span id="modal-tech">Tech</span></div>
+                    <button id="modal-link" class="btn-play">View Live</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+                  </html>
