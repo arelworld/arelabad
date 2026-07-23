@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arel Abad Portfolio</title>
+    
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            dark: '#0a0a0a',
+                            surface: '#121212',
+                            border: '#262626',
+                            muted: '#a3a3a3',
+                            white: '#ffffff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"PT Sans Narrow"', 'sans-serif'],
+                        serif: ['"PT Serif"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555555;
+        }
+
+    
+        .bg-grid-pattern {
+            background-size: 30px 30px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+
+        .heading-narrow {
+            font-family: 'PT Sans Narrow', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .body-serif {
+            font-family: 'PT Serif', serif;
+        }
+</style>
+    
+</head>
+<body class="bg-brand-black text-white font-serif antialiased selection:bg-white selection:text-black min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- nav -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-brand-black/80 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+          
+            <a href="#home" class="heading-narrow text-2xl font-bold tracking-wider hover:opacity-80 transition-opacity">
+                AREL<span class="text-neutral-500">.ABAD</span>
+            </a>
+
+            <!-- menu -->
+            <nav class="hidden md:flex items-center space-x-8 heading-narrow text-sm uppercase tracking-widest text-neutral-400">
+                <a href="#home" class="hover:text-white transition-colors py-1 relative active-nav" data-section="home">Home</a>
+                <a href="#about" class="hover:text-white transition-colors py-1 relative" data-section="about">About</a>
+                <a href="#experience" class="hover:text-white transition-colors py-1 relative" data-section="experience">Experience</a>
+                <a href="#skills" class="hover:text-white transition-colors py-1 relative" data-section="skills">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors py-1 relative" data-section="projects">Projects</a>
+                <a href="#beyond-tech" class="hover:text-white transition-colors py-1 relative">Beyond Tech</a>
+                <a href="#contact" class="hover:text-white transition-colors py-1 relative" data-section="contact">Contact</a>
+            </nav>
+
+
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none p-2" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+    
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-brand-border px-6 py-6 space-y-4 heading-narrow uppercase tracking-wider text-sm text-neutral-300">
+            <a href="#home" class="block hover:text-white transition-colors py-1">Home</a>
+            <a href="#about" class="block hover:text-white transition-colors py-1">About</a>
+            <a href="#experience" class="block hover:text-white transition-colors py-1">Experience</a>
+            <a href="#skills" class="block hover:text-white transition-colors py-1">Skills</a>
+            <a href="#projects" class="block hover:text-white transition-colors py-1">Projects</a>
+            <a href="#beyond-tech" class="block hover:text-white transition-colors py-1">Beyond Tech</a>
+            <a href="#contact" class="block hover:text-white transition-colors py-1">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+
+        <!--landing-->
+        <section id="home" class="relative min-h-[90vh] flex items-center justify-center bg-grid-pattern px-6 py-20">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <div class="inline-flex items-center gap-2 border border-brand-border bg-brand-surface/50 px-4 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="heading-narrow text-xs tracking-widest uppercase text-neutral-300">OPEN TO NEW OPPORTUNITIES</span>
+                </div>
+
+                <h1 class="heading-narrow text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white leading-none">
+                    AREL M. ABAD
+                </h1>
+
+                <p class="body-serif text-lg sm:text-xl text-neutral-300 max-w-2xl mx-auto leading-relaxed italic">
+                   Exploring technology, support, and digital creation, constantly learning in the process.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 heading-narrow tracking-widest text-sm">
+                    <a href="#experience" class="w-full sm:w-auto px-8 py-3.5 bg-white text-black font-bold border border-white hover:bg-black hover:text-white transition-all duration-300 rounded-none text-center">
+                        VIEW EXPERIENCE
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-transparent text-white font-bold border border-brand-border hover:border-white transition-all duration-300 rounded-none text-center">
+                        GET IN TOUCH
+                    </a>
+                </div>
+
+                <!-- badge-->
+                <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-brand-border/60 max-w-3xl mx-auto text-left">
+                    <div>
+                        <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Based In</p>
+                        <p class="heading-narrow font-bold text-white text-base">Bacolod City</p>
+                    </div>
+                    <div>
+                        <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Education</p>
+                        <p class="heading-narrow font-bold text-white text-base">BS Information Tech</p>
+                    </div>
+                    <div>
+                        <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">INTERESTS</p>
+                        <p class="heading-narrow font-bold text-white text-base">TECH & CREATION</p>
+                    </div>
+                    <div>
+                        <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Contact</p>
+                        <p class="heading-narrow font-bold text-white text-base">0945 724 9267</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- aboutme -->
+        <section id="about" class="py-24 px-6 border-t border-brand-border bg-brand-dark">
+            <div class="max-w-6xl mx-auto space-y-12">
+        
+                <div class="flex items-center space-x-4">
+                    <span class="heading-narrow text-sm text-neutral-500 tracking-widest">01 /</span>
+                    <h2 class="heading-narrow text-3xl sm:text-4xl font-bold tracking-wider">ABOUT ME</h2>
+                    <div class="h-px bg-brand-border flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- pic-->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm aspect-[4/5] bg-gradient-to-b from-neutral-900 via-neutral-950 to-black border border-brand-border overflow-hidden flex flex-col items-center justify-center p-6 group">
+                         
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-700/20 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
+                            
+                           <!--circle around pic -->
+                            <div class="relative z-10 w-44 h-44 sm:w-52 sm:h-52 rounded-full border border-neutral-700 bg-neutral-900/80 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:border-white transition-all duration-500 shadow-2xl overflow-hidden p-1">
+                                <img 
+                                    src="profile.jpg" 
+                                    alt="Arel M. Abad" 
+                                    loading="eager" 
+                                    decoding="async"
+                                    class="w-full h-full object-cover rounded-full filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                                />
+                            </div>
+
+                            <div class="relative z-10 text-center space-y-2">
+                                <h3 class="heading-narrow text-xl font-bold text-white tracking-widest">AREL M. ABAD</h3>
+                                <p class="heading-narrow text-xs text-neutral-400 tracking-wider uppercase">IT Specialist & Technical Support</p>
+                            </div>
+
+                            <!-- status -->
+                            <div class="mt-6 relative z-10 inline-flex items-center gap-2 px-3 py-1 bg-black border border-brand-border rounded-full">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="heading-narrow text-[10px] uppercase text-neutral-300 tracking-widest">Open to Opportunities</span>
+                            </div>
+
+                         
+                            <div class="absolute bottom-3 left-3 right-3 z-20 bg-black/90 border border-brand-border p-2.5 flex justify-between items-center backdrop-blur-sm">
+                                <span class="heading-narrow text-xs font-bold text-white tracking-widest uppercase">STATUS</span>
+                                <span class="heading-narrow text-[10px] text-emerald-400 uppercase tracking-wider">AVAILABLE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bio and educ -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="body-serif text-neutral-300 leading-relaxed text-lg space-y-4">
+                            <p>
+                                Hello! I'm <strong class="text-white font-normal underline decoration-neutral-600 underline-offset-4">Arel M. Abad</strong>, a Bachelor of Science in Information Technology graduate from <em>Carlos Hilado Memorial State University - Alijis</em> (2020 - 2024).
+                            </p>
+                            <p>
+                                thrive on solving technical issues and building personal digital projects. With hands-on experience in tech support at Technopal Software and an internship at Trident Technology, I focus on fixing problems, improving workflows, and constantly learning new tools.
+                            </p>
+                        </div>
+
+
+                        <!-- educcard -->
+                        <div class="bg-black border border-brand-border p-6 mt-6 space-y-4 relative overflow-hidden">
+                            <h3 class="heading-narrow text-lg font-bold tracking-wider text-white border-b border-brand-border pb-2">
+                                EDUCATION & BACKGROUND
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Degree</p>
+                                    <p class="heading-narrow font-bold text-white text-base">BS Information Technology</p>
+                                </div>
+                                <div>
+                                    <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Institution</p>
+                                    <p class="body-serif text-sm text-neutral-300">Carlos Hilado Memorial State Univ - Alijis</p>
+                                </div>
+                                <div>
+                                    <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Years</p>
+                                    <p class="heading-narrow font-bold text-white text-base">2020 – 2024</p>
+                                </div>
+                                <div>
+                                    <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Location</p>
+                                    <p class="heading-narrow font-bold text-white text-base">Bacolod City</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- work exp -->
+        <section id="experience" class="py-24 px-6 border-t border-brand-border bg-brand-black">
+            <div class="max-w-5xl mx-auto space-y-12">
+               
+                <div class="flex items-center space-x-4">
+                    <span class="heading-narrow text-sm text-neutral-500 tracking-widest">02 /</span>
+                    <h2 class="heading-narrow text-3xl sm:text-4xl font-bold tracking-wider">WORK EXPERIENCE</h2>
+                    <div class="h-px bg-brand-border flex-grow"></div>
+                </div>
+
+                <!--timeline-->
+                <div class="relative border-l border-brand-border ml-4 sm:ml-32 space-y-12 pl-6 sm:pl-8">
+
+                    <!--exp 1 -->
+                    <div class="relative group">
+                        <!-- Dot Indicator -->
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3 h-3 rounded-full bg-white border-4 border-black group-hover:scale-125 transition-transform"></div>
+                        
+                      
+                        <span class="hidden sm:block absolute -left-36 top-0 heading-narrow text-xs uppercase text-neutral-500 tracking-wider">
+                            JUL 2024 – JUL 2025
+                        </span>
+
+                        <div class="bg-brand-dark border border-brand-border p-6 hover:border-neutral-500 transition-colors">
+                            <span class="sm:hidden block heading-narrow text-xs text-neutral-500 tracking-wider mb-2">JULY 2024 – JULY 2025</span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <h3 class="heading-narrow text-xl font-bold tracking-wide text-white">Technical Support</h3>
+                                <span class="heading-narrow text-xs uppercase px-2.5 py-1 border border-neutral-700 bg-black text-neutral-300 self-start">Technopal Software • Bacolod City</span>
+                            </div>
+                            <ul class="body-serif text-sm text-neutral-300 mt-4 leading-relaxed list-disc list-inside space-y-2">
+                                <li>Organized and maintained digital databases for various client systems and records, ensuring data accuracy and accessibility.</li>
+                                <li>Set up computer hardware and software for new users while resetting and updating systems to be reused by current or new clients.</li>
+                                <li>Provided remote technical support, troubleshooting issues and performing system updates efficiently.</li>
+                                <li>Contributed to software improvement projects by assisting in the update and maintenance of systems used by clients.</li>
+                                <li>Collaborated on team projects and provided guidance to interns by introducing company systems and answering technical inquiries.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-brand-border/60 heading-narrow text-xs text-neutral-400">
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">Technical Support</span>
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">Hardware/Software Setup</span>
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">Database Management</span>
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">Remote Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- exp2 -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3 h-3 rounded-full bg-neutral-600 border-4 border-black group-hover:bg-white transition-colors"></div>
+                        
+                        <span class="hidden sm:block absolute -left-36 top-0 heading-narrow text-xs uppercase text-neutral-500 tracking-wider">
+                            FEB 2024 – JUN 2024
+                        </span>
+
+                        <div class="bg-brand-dark border border-brand-border p-6 hover:border-neutral-500 transition-colors">
+                            <span class="sm:hidden block heading-narrow text-xs text-neutral-500 tracking-wider mb-2">FEB 2024 – JUNE 2024</span>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <h3 class="heading-narrow text-xl font-bold tracking-wide text-white">Intern</h3>
+                                <span class="heading-narrow text-xs uppercase px-2.5 py-1 border border-neutral-700 bg-black text-neutral-300 self-start">Trident Technology • Bacolod City</span>
+                            </div>
+                            <ul class="body-serif text-sm text-neutral-300 mt-4 leading-relaxed list-disc list-inside space-y-2">
+                                <li>Supported the development of a management system prototype in a team setting.</li>
+                                <li>Assisted in organizing workflows for record-keeping and reporting.</li>
+                                <li>Helped identify and resolve process or system issues during testing.</li>
+                                <li>Documented progress and applied feedback from review meetings.</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-brand-border/60 heading-narrow text-xs text-neutral-400">
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">System Prototype</span>
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">Record Keeping</span>
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">System Testing</span>
+                                <span class="px-2 py-0.5 border border-brand-border bg-black">Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- skills -->
+        <section id="skills" class="py-24 px-6 border-t border-brand-border bg-brand-dark">
+            <div class="max-w-5xl mx-auto space-y-12">
+               
+                <div class="flex items-center space-x-4">
+                    <span class="heading-narrow text-sm text-neutral-500 tracking-widest">03 /</span>
+                    <h2 class="heading-narrow text-3xl sm:text-4xl font-bold tracking-wider">TECHNICAL SKILLS</h2>
+                    <div class="h-px bg-brand-border flex-grow"></div>
+                </div>
+
+               
+                <div class="flex flex-wrap gap-2 heading-narrow text-xs tracking-widest uppercase">
+                    <button class="skill-tab active px-4 py-2 border border-white bg-white text-black font-bold transition-all" data-category="all">ALL</button>
+                    <button class="skill-tab px-4 py-2 border border-brand-border bg-black text-neutral-400 hover:text-white transition-all" data-category="support">SUPPORT & OS</button>
+                    <button class="skill-tab px-4 py-2 border border-brand-border bg-black text-neutral-400 hover:text-white transition-all" data-category="data">DATA & DB</button>
+                    <button class="skill-tab px-4 py-2 border border-brand-border bg-black text-neutral-400 hover:text-white transition-all" data-category="tools">TOOLS & DOCS</button>
+                    <button class="skill-tab px-4 py-2 border border-brand-border bg-black text-neutral-400 hover:text-white transition-all" data-category="web">WEB & DEV</button>
+                </div>
+
+                <!-- skillcards -->
+                <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="support">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Operating Systems (Windows, CentOS Linux)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">OS setup, maintenance, and system updating for clients.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="support">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Remote Support (AnyDesk)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Remote desktop technical assistance & issue resolution.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="data">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Database Management (MySQL)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Organizing and maintaining digital databases and records.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="data">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Data Entry & Validation</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Record management, system testing, and data verification.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="tools">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Version Control (Git & GitHub)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Code repositories and collaborative workflow tracking.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="tools">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Documentation (Notion, GitBook, Docs)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Workflow guides, progress reports, and review notes.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="tools">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Microsoft Office Suite</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Word, PowerPoint, and Excel spreadsheet management.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="tools">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">Design Tools (Canva)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Visual layout, design documentation, and presentation materials.</p>
+                    </div>
+
+                    <div class="skill-card bg-black border border-brand-border p-5 hover:border-neutral-500 transition-all" data-category="web">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="heading-narrow font-bold tracking-wider text-white">WEB BASICS (HTML, CSS, JS)</span>
+                        </div>
+                        <p class="body-serif text-xs text-neutral-400">Building web layouts and interactive components while experimenting with personal digital projects.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- projs -->
+        <section id="projects" class="py-24 px-6 border-t border-brand-border bg-brand-black">
+            <div class="max-w-5xl mx-auto space-y-12">
+            
+                <div class="flex items-center space-x-4">
+                    <span class="heading-narrow text-sm text-neutral-500 tracking-widest">04 /</span>
+                    <h2 class="heading-narrow text-3xl sm:text-4xl font-bold tracking-wider">PROJECTS & WORK HIGHLIGHTS</h2>
+                    <div class="h-px bg-brand-border flex-grow"></div>
+                </div>
+
+               
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- proj1 -->
+                    <div class="group bg-brand-dark border border-brand-border overflow-hidden hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="relative bg-black p-8 border-b border-brand-border flex items-center justify-center min-h-[180px] overflow-hidden">
+                                <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+                                <span class="heading-narrow text-3xl font-bold text-neutral-700 group-hover:text-neutral-400 transition-colors select-none text-center">
+                                    MANAGEMENT SYSTEM PROTOTYPE
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="heading-narrow text-2xl font-bold text-white tracking-wide">Trident Management System</h3>
+                                    <span class="heading-narrow text-xs text-neutral-500">2024</span>
+                                </div>
+                                <p class="body-serif text-sm text-neutral-400 leading-relaxed">
+                                    Supported prototype development in a team environment. Organized record-keeping workflows, resolved system testing issues, and documented project milestones.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                                    <span class="px-2 py-0.5 bg-black border border-brand-border">System Testing</span>
+                                    <span class="px-2 py-0.5 bg-black border border-brand-border">Workflows</span>
+                                    <span class="px-2 py-0.5 bg-black border border-brand-border">Documentation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 pt-0 flex items-center gap-4 heading-narrow text-xs font-bold tracking-wider">
+                            <button onclick="openModal('Management System Prototype', 'Supported the development of a management system prototype at Trident Technology. Assisted in organizing workflows for record-keeping and reporting, identified and resolved issues during testing, and applied reviewer feedback.', ['System Testing', 'Record Keeping', 'Documentation', 'Git & GitHub'])" class="px-4 py-2 bg-white text-black border border-white hover:bg-black hover:text-white transition-colors">
+                                DETAILS
+                            </button>
+                        </div>
+                    </div>
+
+                    
+
+
+                    <!-- proj2 -->
+                    <div class="group bg-brand-dark border border-brand-border overflow-hidden hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="relative bg-black p-8 border-b border-brand-border flex items-center justify-center min-h-[180px] overflow-hidden">
+                                <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+                                <span class="heading-narrow text-3xl font-bold text-neutral-700 group-hover:text-neutral-400 transition-colors select-none text-center">
+                                    CLIENT DATABASE & REPOSITORY
+                                </span>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="heading-narrow text-2xl font-bold text-white tracking-wide">Technopal Database Management</h3>
+                                    <span class="heading-narrow text-xs text-neutral-500">2024–2025</span>
+                                </div>
+                                <p class="body-serif text-sm text-neutral-400 leading-relaxed">
+                                    Organized and maintained digital databases for client systems, ensuring 100% data accuracy, accessibility, and smooth workstation resets.
+                                </p>
+                                <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                                    <span class="px-2 py-0.5 bg-black border border-brand-border">MySQL</span>
+                                    <span class="px-2 py-0.5 bg-black border border-brand-border">Data Validation</span>
+                                    <span class="px-2 py-0.5 bg-black border border-brand-border">System Setup</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 pt-0 flex items-center gap-4 heading-narrow text-xs font-bold tracking-wider">
+                            <button onclick="openModal('Technopal Database Management', 'Maintained digital databases across multiple client systems at Technopal Software. Handled user workstation provisioning, hardware/software setup, and remote AnyDesk support.', ['MySQL', 'Data Management', 'AnyDesk', 'CentOS Linux'])" class="px-4 py-2 bg-white text-black border border-white hover:bg-black hover:text-white transition-colors">
+                                DETAILS
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- proj3-->
+<div class="group bg-brand-dark border border-brand-border overflow-hidden hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between">
+    <div>
+        <!-- prev vid banner-->
+        <a href="https://youtu.be/yXUNFm8jIJk" target="_blank" rel="noopener noreferrer" class="relative bg-black border-b border-brand-border h-[180px] overflow-hidden flex items-center justify-center block group/video">
+            <!-- thumbnail -->
+            <img src="https://img.youtube.com/vi/yXUNFm8jIJk/hqdefault.jpg" 
+                 alt="Laravel Coffee Shop Inventory System Demo" 
+                 class="w-full h-full object-cover opacity-60 group-hover/video:opacity-90 group-hover/video:scale-105 transition-all duration-300" />
+            
+            <div class="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
+            
+            <!-- play bttn-->
+            <div class="absolute w-12 h-12 bg-white text-black border border-white flex items-center justify-center group-hover/video:scale-110 group-hover/video:bg-black group-hover/video:text-white transition-all duration-300">
+                <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </a>
+
+        <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+                <h3 class="heading-narrow text-2xl font-bold text-white tracking-wide">Coffee Shop Inventory System</h3>
+                <span class="heading-narrow text-xs text-neutral-500">2026</span>
+            </div>
+            <p class="body-serif text-sm text-neutral-400 leading-relaxed">
+            A Laravel-based inventory management system built as a learning project while exploring the basics of Laravel and Laravel Herd. The project includes basic inventory features such as product and stock management.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                <span class="px-2 py-0.5 bg-black border border-brand-border">Laravel</span>
+                <span class="px-2 py-0.5 bg-black border border-brand-border">Inventory Analytics</span>
+                <span class="px-2 py-0.5 bg-black border border-brand-border">PDF Export</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- btns -->
+    <div class="p-6 pt-0 flex flex-wrap items-center gap-2 heading-narrow text-xs font-bold tracking-wider">
+        <!-- deets btn -->
+        <button onclick="openModal('Coffee Shop Inventory System', 'Built a comprehensive Laravel web application designed to streamline cafe operations. Includes batch tracking with expiry alerts, automated restock calculations, usage and waste logging, supplier directory management, and instant PDF report exports.', ['Laravel', 'PHP', 'MySQL/PostgreSQL', 'Tailwind CSS', 'PDF Generation'])" class="px-3 py-2 bg-white text-black border border-white hover:bg-black hover:text-white transition-colors">
+            DETAILS
+        </button>
+        
+        <!--yt link -->
+        <a href="https://youtu.be/yXUNFm8jIJk" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-transparent text-neutral-300 border border-brand-border hover:border-red-500 hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current text-red-500" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            DEMO VIDEO
+        </a>
+
+        <!-- gthub link -->
+        <a href="https://github.com/arelworld/coffee-shop-inventory" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-transparent text-neutral-300 border border-brand-border hover:border-white hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GITHUB
+        </a>
+    </div>
+</div>
+
+                    <!-- proj4 -->
+<div class="group bg-brand-dark border border-brand-border overflow-hidden hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between">
+    <div>
+    
+        <a href="https://arelworld.github.io/arlfont/" target="_blank" rel="noopener noreferrer" class="relative bg-black border-b border-brand-border h-[180px] overflow-hidden flex items-center justify-center block group/preview">
+            <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+            
+         
+            <span class="heading-narrow text-4xl font-bold text-neutral-600 group-hover/preview:text-white transition-colors select-none text-center px-4">
+                ARL FONT GENERATOR
+            </span>
+        </a>
+
+        <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+                <h3 class="heading-narrow text-2xl font-bold text-white tracking-wide">Arl Font Web App</h3>
+                <span class="heading-narrow text-xs text-neutral-500">2026</span>
+            </div>
+            <p class="body-serif text-sm text-neutral-400 leading-relaxed">
+                Created a web tool for rendering custom handwriting TTF fonts onto an HTML5 canvas with real-time controls for sizing, rainbow/gradient text modes, line spacing, and HD PNG export.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                <span class="px-2 py-0.5 bg-black border border-brand-border">Custom Typography</span>
+                <span class="px-2 py-0.5 bg-black border border-brand-border">HTML5 Canvas API</span>
+                <span class="px-2 py-0.5 bg-black border border-brand-border">JavaScript</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="p-6 pt-0 flex flex-wrap items-center gap-2 heading-narrow text-xs font-bold tracking-wider">
+
+        <button onclick="openModal('Arl Font Web App', 'Developed a web-based handwriting generator leveraging a custom TTF font created with Calligraphr. Features a responsive sidebar UI for real-time text manipulation, variable typography scaling, custom background rendering, and high-resolution PNG image downloading directly from an HTML5 canvas context.', ['Custom Fonts', 'HTML5 Canvas', 'JavaScript', 'CSS Grid', 'GitHub Pages'])" class="px-3 py-2 bg-white text-black border border-white hover:bg-black hover:text-white transition-colors">
+            DETAILS
+        </button>
+        
+      
+        <a href="https://arelworld.github.io/arlfont/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-transparent text-neutral-300 border border-brand-border hover:border-white hover:text-white transition-colors flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            LIVE DEMO
+        </a>
+
+       
+        <a href="https://github.com/arelworld/arlfont" 
+            target="_blank" rel="noopener noreferrer" 
+            class="px-3 py-2 bg-transparent text-neutral-300 border border-brand-border hover:border-white hover:text-white transition-colors flex items-center gap-1.5">
+            
+        </a>
+    </div>
+</div>
+
+                    <!-- proj5 -->
+<div class="group bg-brand-dark border border-brand-border overflow-hidden hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between">
+    <div>
+        <div class="relative bg-black p-8 border-b border-brand-border flex items-center justify-center min-h-[180px] overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+            <span class="heading-narrow text-3xl font-bold text-neutral-700 group-hover:text-neutral-400 transition-colors select-none text-center">
+                FILIPINO DISH FINDER & BUDGET PLANNER
+            </span>
+        </div>
+
+        <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+                <h3 class="heading-narrow text-2xl font-bold text-white tracking-wide">
+                    Ma Ano Ulam?
+                </h3>
+                <span class="heading-narrow text-xs text-neutral-500">2026</span>
+            </div>
+
+            <p class="body-serif text-sm text-neutral-400 leading-relaxed">
+                A Filipino dish finder and budget planner inspired by my mama, who often has a hard time deciding what to cook.
+
+            <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                <span class="px-2 py-0.5 bg-black border border-brand-border">Filipino Cuisine</span>
+                <span class="px-2 py-0.5 bg-black border border-brand-border">Budget Planner</span>
+                <span class="px-2 py-0.5 bg-black border border-brand-border">Meal Planning</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-6 pt-0 flex items-center gap-4 heading-narrow text-xs font-bold tracking-wider">
+        <button onclick="openModal(
+            'Ma Ano Ulam?',
+            'Ma Ano Ulam? is a Filipino dish finder and budget planner inspired by my mama, who often has a hard time thinking about what to cook for the family. The idea came from the everyday struggle of deciding what to prepare for a meal, especially when everyone answers, “Ikaw na bahala.” The web app helps users discover Filipino dish ideas based on their budget, spin for a random dish, save favorites, and plan their meals for the week.',
+            ['HTML', 'CSS', 'JavaScript', 'Budget Filtering', 'Local Storage', 'Meal Planning']
+        )" class="px-4 py-2 bg-white text-black border border-white hover:bg-black hover:text-white transition-colors">
+            DETAILS
+        </button>
+
+        <a href="https://arelworld.github.io/ulamama/"
+           target="_blank"
+           class="px-4 py-2 border border-brand-border text-neutral-400 hover:border-white hover:text-white transition-colors">
+            VIEW PROJECT
+        </a>
+    </div>
+</div>
+
+                    <!-- proj5 -->
+<div class="group bg-brand-dark border border-brand-border overflow-hidden hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between">
+    <div>
+
+        <a href="https://arelworld.github.io/wordbank/" target="_blank" rel="noopener noreferrer" class="relative bg-black border-b border-brand-border h-[180px] overflow-hidden flex items-center justify-center block group/preview">
+            <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
+
+            <span class="heading-narrow text-4xl font-bold text-neutral-600 group-hover/preview:text-white transition-colors select-none text-center px-4">
+                WORD BANK
+            </span>
+        </a>
+
+        <div class="p-6 space-y-4">
+
+            <div class="flex justify-between items-start">
+                <h3 class="heading-narrow text-2xl font-bold text-white tracking-wide">
+                    Word Bank
+                </h3>
+
+                <span class="heading-narrow text-xs text-neutral-500">
+                    2026
+                </span>
+            </div>
+
+            <p class="body-serif text-sm text-neutral-400 leading-relaxed">
+                A personal vocabulary learning app for saving unfamiliar words encountered while reading. 
+
+            <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+
+                <span class="px-2 py-0.5 bg-black border border-brand-border">
+                    Vocabulary Learning
+                </span>
+
+                <span class="px-2 py-0.5 bg-black border border-brand-border">
+                    LocalStorage
+                </span>
+
+                <span class="px-2 py-0.5 bg-black border border-brand-border">
+                    JavaScript
+                </span>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="p-6 pt-0 flex flex-wrap items-center gap-2 heading-narrow text-xs font-bold tracking-wider">
+
+        <button onclick="openModal('Word Bank', 'Developed a personal vocabulary learning application for collecting and reviewing unfamiliar words encountered while reading. The app supports word definitions, example sentences, search, editing, deletion, browser-based localStorage persistence, and PDF backup generation.', ['HTML', 'CSS', 'JavaScript', 'LocalStorage', 'jsPDF', 'GitHub Pages'])" class="px-3 py-2 bg-white text-black border border-white hover:bg-black hover:text-white transition-colors">
+            DETAILS
+        </button>
+
+
+        <a href="https://arelworld.github.io/wordbank/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-transparent text-neutral-300 border border-brand-border hover:border-white hover:text-white transition-colors flex items-center gap-1.5">
+
+            <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+
+            LIVE DEMO
+
+        </a>
+
+
+        <a href="https://github.com/arelworld/wordbank" 
+            target="_blank" rel="noopener noreferrer" 
+            class="px-3 py-2 bg-transparent text-neutral-300 border border-brand-border hover:border-white hover:text-white transition-colors flex items-center gap-1.5">
+
+        
+
+        </a>
+
+    </div>
+
+</div>
+
+                </div>
+            </div>
+        </section>
+
+<!-- beyond -->
+<section id="beyond-tech" class="py-24 px-6 border-t border-brand-border bg-brand-black">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+        <div class="flex items-center space-x-4">
+            <span class="heading-narrow text-sm text-neutral-500 tracking-widest">02 /</span>
+            <h2 class="heading-narrow text-3xl sm:text-4xl font-bold tracking-wider">BEYOND TECH</h2>
+            <div class="h-px bg-brand-border flex-grow"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- write-->
+            <div class="bg-brand-dark border border-brand-border p-8 hover:border-neutral-500 transition-colors space-y-4 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-white">
+                        <i data-lucide="book-open" class="w-6 h-6 text-neutral-400"></i>
+                        <h3 class="heading-narrow text-xl font-bold tracking-wide">WRITING & READING</h3>
+                    </div>
+                    <p class="body-serif text-sm text-neutral-300 leading-relaxed">
+                    I enjoy personal writing, journaling, reading EPUB books with realistic stories, and spending time on Substack.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Writing</span>
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Slice-of-Life</span>
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Substack</span>
+                    </div>
+                </div>
+
+            
+                <div class="pt-6 border-t border-brand-border/60 flex flex-wrap gap-2 heading-narrow text-xs tracking-wider">
+                    <a href="https://0817street.blogspot.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black border border-brand-border hover:border-white text-white transition-colors">
+                        <span>BLOGSPOT</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                    <a href="https://substack.com/@00017" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black border border-brand-border hover:border-white text-white transition-colors">
+                        <span>SUBSTACK</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- music -->
+            <div class="bg-brand-dark border border-brand-border p-8 hover:border-neutral-500 transition-colors space-y-4 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-white">
+                        <i data-lucide="music" class="w-6 h-6 text-neutral-400"></i>
+                        <h3 class="heading-narrow text-xl font-bold tracking-wide">MUSIC ENTHUSIAST</h3>
+                    </div>
+                    <p class="body-serif text-sm text-neutral-300 leading-relaxed">
+                      My favorite genres include Alt-Rock, Pop-Punk, and Emo. Faber Drive’s 'Tongue Tied' and 'Vegas Skies' by The Cab are my all-time favorites, alongside OPM, K-pop, and Indie Pop. I especially love TWICE and NIKI.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Alt-Rock / Emo</span>
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">OPM / K-Pop</span>
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Faber Drive</span>
+                    </div>
+                </div>
+
+            
+                <div class="pt-6 border-t border-brand-border/60 flex flex-wrap gap-3 heading-narrow text-xs tracking-wider">
+                    <a href="https://open.spotify.com/user/t9tgplij9wdvpk3qm8qfi2yg2?si=bba995d22206438e" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black border border-brand-border hover:border-white text-white transition-colors">
+                        <span>SPOTIFY PROFILE</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- movie -->
+            <div class="bg-brand-dark border border-brand-border p-8 hover:border-neutral-500 transition-colors space-y-4 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-white">
+                        <i data-lucide="film" class="w-6 h-6 text-neutral-400"></i>
+                        <h3 class="heading-narrow text-xl font-bold tracking-wide">CINEMA & SERIES</h3>
+                    </div>
+                    <p class="body-serif text-sm text-neutral-300 leading-relaxed">
+                        Big fan of Hirokazu Kore-eda films (<em>Shoplifters</em>), Studio Ghibli (<em>Spirited Away</em>), K-dramas (<em>My Liberation Notes</em>), cooking shows, thrillers (<em>IT / Welcome to Derry</em>, <em>Fear Street</em>), and Rom-Coms/Dramas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 heading-narrow text-xs text-neutral-400">
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Kore-eda / Ghibli</span>
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">K-Dramas</span>
+                        <span class="px-2.5 py-1 bg-black border border-brand-border">Thrillers & Rom-Coms</span>
+                    </div>
+                </div>
+
+            
+                <div class="pt-6 border-t border-brand-border/60 flex flex-wrap gap-3 heading-narrow text-xs tracking-wider">
+                    <a href="https://boxd.it/7JRXJ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black border border-brand-border hover:border-white text-white transition-colors">
+                        <span>LETTERBOXD</span>
+                        <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        
+
+        <!-- contact-->
+        <section id="contact" class="py-24 px-6 border-t border-brand-border bg-brand-dark">
+            <div class="max-w-5xl mx-auto space-y-12">
+          
+                <div class="flex items-center space-x-4">
+                    <span class="heading-narrow text-sm text-neutral-500 tracking-widest">05 /</span>
+                    <h2 class="heading-narrow text-3xl sm:text-4xl font-bold tracking-wider">GET IN TOUCH</h2>
+                    <div class="h-px bg-brand-border flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                    
+                    <!-- contact deets -->
+                    <div class="md:col-span-5 space-y-8">
+                        <div>
+                            <h3 class="heading-narrow text-2xl font-bold text-white mb-3">LET'S CONNECT</h3>
+                            <p class="body-serif text-neutral-400 text-sm leading-relaxed">
+                                I am currently open to Technical Support, IT Specialist, and Database Administration roles. Feel free to contact me directly!
+                            </p>
+                        </div>
+
+                        <!-- copy gmail -->
+                        <div class="space-y-2">
+                            <span class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">Direct Email</span>
+                            <div class="flex items-center gap-2 bg-black border border-brand-border p-3 justify-between">
+                                <span id="email-text" class="heading-narrow text-sm text-white font-bold tracking-wide lowercase">aarel.abad@gmail.com</span>
+                                <button onclick="copyEmail()" class="text-neutral-400 hover:text-white transition-colors p-1" title="Copy to Clipboard" aria-label="Copy Email">
+                                    <i data-lucide="copy" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- infos-->
+                        <div class="space-y-3 font-sans text-xs uppercase tracking-widest text-neutral-400">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-4 h-4 text-white"></i>
+                                <span class="text-white font-bold">0945 724 9267</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                                <span>Bacolod City, Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                    <div class="md:col-span-7 bg-black border border-brand-border p-8">
+                        <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label for="name" class="block heading-narrow text-xs text-neutral-400 uppercase tracking-widest mb-2">Your Name</label>
+                                <input type="text" id="name" required placeholder="Name or Organization" class="w-full bg-brand-dark border border-brand-border text-white px-4 py-3 focus:outline-none focus:border-white transition-colors body-serif text-sm">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block heading-narrow text-xs text-neutral-400 uppercase tracking-widest mb-2">Your Email</label>
+                                <input type="email" id="email" required placeholder="email@example.com" class="w-full bg-brand-dark border border-brand-border text-white px-4 py-3 focus:outline-none focus:border-white transition-colors body-serif text-sm">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block heading-narrow text-xs text-neutral-400 uppercase tracking-widest mb-2">Message</label>
+                                <textarea id="message" rows="4" required placeholder="Write your inquiry or job offer here..." class="w-full bg-brand-dark border border-brand-border text-white px-4 py-3 focus:outline-none focus:border-white transition-colors body-serif text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="w-full heading-narrow text-sm font-bold tracking-widest uppercase bg-white text-black py-4 border border-white hover:bg-black hover:text-white transition-all duration-300">
+                                SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- proj modal-->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div class="bg-brand-dark border border-brand-border max-w-lg w-full p-8 relative space-y-6 shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-neutral-400 hover:text-white" aria-label="Close Modal">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h3 id="modal-title" class="heading-narrow text-2xl font-bold text-white tracking-wide"></h3>
+            <p id="modal-description" class="body-serif text-sm text-neutral-300 leading-relaxed"></p>
+            <div>
+                <h4 class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest mb-2">Technologies Used</h4>
+                <div id="modal-tech" class="flex flex-wrap gap-2 heading-narrow text-xs text-neutral-300"></div>
+            </div>
+            <div class="pt-4 flex justify-end">
+                <button onclick="closeModal()" class="px-6 py-2.5 bg-white text-black font-bold heading-narrow text-xs tracking-widest hover:bg-neutral-200 transition-colors">
+                    CLOSE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- notif -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-white text-black px-6 py-3 border border-white shadow-xl flex items-center space-x-3 transition-opacity">
+        <i data-lucide="info" class="w-4 h-4"></i>
+        <span id="toast-text" class="heading-narrow text-xs font-bold uppercase tracking-wider"></span>
+    </div>
+
+    <!-- footer -->
+    <footer class="border-t border-brand-border py-8 px-6 bg-black">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="heading-narrow text-xs text-neutral-500 uppercase tracking-widest">
+                &copy; 2026 AREL M. ABAD. ALL RIGHTS RESERVED.
+            </p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="heading-narrow text-xs text-neutral-400 hover:text-white uppercase tracking-widest flex items-center gap-1">
+                <span>BACK TO TOP</span>
+                <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
